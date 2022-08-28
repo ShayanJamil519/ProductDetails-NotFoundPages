@@ -1,0 +1,249 @@
+button,
+select {
+    cursor: pointer;
+}
+
+.ProductDetailsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 3rem;
+    background: #ededed;
+}
+
+.ImgContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex: 0.8;
+}
+
+.ImgContainer__Left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.15;
+    padding: 0 1rem;
+    height: fit-content;
+    overflow-y: auto;
+}
+
+.LeftImgBox {
+    width: 100%;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.LeftImgBox :hover {
+    border-bottom: 5px solid lightgray;
+}
+
+.LeftImgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.ImgContainer__Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.8;
+}
+
+.ImgContainer__Right img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.DetailsContainer {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.DetailsContainer__Content h1 {
+    font-size: 7vmin;
+    font-family: fangsong;
+    font-weight: bold;
+    margin: 0;
+}
+
+.DetailsContainer__Content h5 {
+    margin: 1rem 0 2rem 0;
+    color: #141313;
+    font-family: fangsong;
+    font-weight: 800;
+    font-size: 3vmin;
+}
+
+.DetailsContainer__Content p {
+    font-family: fangsong;
+    color: #626262;
+    font-weight: 500;
+}
+
+.DetailsContainer__ColorFilter {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.DetailsContainer__ColorFilter span {
+    font-weight: 800;
+    font-family: fangsong;
+    text-transform: uppercase;
+}
+
+.ColorFilters {
+    display: flex;
+}
+
+.ColorFilters div {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: black;
+}
+
+.DetailsContainer__SizeFilter {
+    display: flex;
+}
+
+.SizeFilter {
+    margin-right: 1rem;
+}
+
+.SizeFilter p {}
+
+.SizeFilter span {
+    font-weight: 800;
+    font-family: fangsong;
+    text-transform: uppercase;
+}
+
+.SizeFilter select {
+    font-size: 1.2rem;
+    padding: 2.5vmin 12vmin;
+    border-radius: 2px;
+    font-family: fangsong;
+    border: none;
+}
+
+._SizeFilters {
+    display: flex;
+    align-items: center;
+}
+
+._SizeFilters button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.616);
+    padding: 0.5vmax;
+    cursor: pointer;
+}
+
+._SizeFilters button {
+    border: none;
+    padding: 2vmin;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    min-width: 2.5rem;
+    background: #141313;
+    font-size: 4vmin;
+    font-weight: 700;
+}
+
+._SizeFilters input {
+    border: none;
+    height: 4vmin;
+    padding: 2vmin;
+    text-align: center;
+    outline: none;
+    font: 400 0.8vmax "Roboto";
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.SubmitButton {
+    margin: 2rem 1rem 2rem 0;
+    font-size: 1.3rem;
+    color: white;
+    font-family: fangsong;
+    background: black;
+    padding: 1rem 0;
+    border-radius: 2px;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 400px) {
+    .ProductDetailsContainer {
+        flex-direction: column;
+        padding: 2rem 0.5rem;
+    }
+    .ImgContainer {
+        flex: 1;
+        flex-direction: column-reverse;
+    }
+    .ImgContainer__Left {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .LeftImgBox {
+        margin: 0 1rem 0 0;
+        min-width: 80px !important;
+        border-radius: 50%;
+        padding: 10px;
+        background: #e4e3e3;
+    }
+    .LeftImgBox img {
+        object-fit: contain;
+        border-radius: inherit;
+    }
+    .ImgContainer__Right {
+        flex: 0.75;
+    }
+    .DetailsContainer {
+        margin-top: 2rem;
+        flex: 1;
+    }
+    .DetailsContainer__Content h1 {
+        font-size: 8vmin;
+        font-family: serif;
+    }
+    .DetailsContainer__Content h5 {
+        font-size: 4vmin;
+        font-family: serif;
+        margin-bottom: 1rem;
+    }
+    .DetailsContainer__Content p {
+        font-family: serif;
+    }
+    .DetailsContainer__SizeFilter {
+        flex-direction: column;
+    }
+    .SizeFilter select {
+        width: 80%;
+        text-align: center;
+        background: white;
+    }
+    ._SizeFilters button {
+        padding: 3vmin;
+        font-size: 5vmin;
+    }
+    ._SizeFilters input {
+        height: 10vmin;
+        width: 50%;
+        padding: 1vmin;
+    }
+    .SubmitButton {
+        margin: 3rem 5rem 2rem 0;
+        font-size: 1rem;
+    }
+}
